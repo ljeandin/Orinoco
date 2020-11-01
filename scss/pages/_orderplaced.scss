@@ -1,0 +1,49 @@
+.orderplaced{
+	.message{
+		div{
+			margin:32px;
+		}
+		&__resume{
+			@include raleway (22px);
+			
+		}
+
+		&__thanks{
+			@include raleway (22px, 700);
+		}
+	}
+
+	.btnwrapper{
+		display:flex;
+		justify-content:center;
+
+		.boutonretour{
+		@include playfair (24px, 700);
+		background-color:$color-primary;
+		color:$color-secondary;
+		border: 4px solid $color-primary;
+		padding:0 24px;
+		text-align:center;
+
+			a{
+				color:$color-secondary;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1024px){
+	.orderplaced{
+		.message div{
+			margin : 18px;
+		}
+	}
+}
+
+@media screen and (max-width: 768px){
+	.orderplaced{
+		.message div{
+			margin : 18px 0;
+		}
+	}
+}

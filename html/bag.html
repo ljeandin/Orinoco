@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang ="fr">
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/png" href="../media/img/favicon32px.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="../media/img/favicon16px.png" sizes="16x16" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+	<link rel="stylesheet" href="../css/main.css"/>
+	<title>Panier - Orinoco</title>
+</head>
+<body class="checkoutwrapper">
+	<div class="shoppingbag">
+		<header class="headercheckout">
+		 <p class="headercheckout__step">Votre panier</p> <a href ="index.html"><p class ="headercheckout__logo">Orinoco</p></a>
+	 	</header>
+	 		
+		<div class="items_wrapper center" id="bag">
+			<div id="emptybasket" class="emptybasket">
+				<p class="emptybasket--msg"> Votre panier est vide :'(</p>
+				<input id="emptybasket--btn" class="emptybasket--btn" type="button" value="Retour au shopping :)" />
+			</div>
+
+			<div class="productblock" id="productblock"></div>
+
+			<div class="totalblock" id="totalblock"></div>
+		</div>
+	</div>
+
+	<div class="checkoutform" id="checkoutform">
+		<div class="headercheckout">
+		<p class="headercheckout__step">Formulaire de commande <em>(*obligatoire)</em></p>
+	 	</div>
+
+	 	<form method="post" id="contact">
+	 		<div class="center">
+		 		<div class="title">Informations d'envoi</div>
+		 		<div class="formwrapper">
+			 		<section>
+			 			<div>
+				 			<label for="nom">Nom*</label>
+				 			<input id="formlastname" type="text" name="nom" class="shipping__lastname" />
+				 		</div>
+							
+				 		<div> 
+					 	 	<label for="prénom">Pr&#xE9nom*</label>
+				 		 	<input id="formfirstname" type="text" name="prénom" class="shipping__firstname" />
+				 		</div>
+				 	</section>
+				 			 
+				 	<section>
+				 		<div>
+				 			<label for="adresse">Adresse*</label>
+				 			<input id="formadress" type="text" name="adresse" class="shipping__adress" />
+				 		</div>
+
+				 		<div>
+				 			<label for="ville">Ville*</label>
+				 			<input id="formcity" type="text" name="ville" class="shipping__city" />
+				 		</div>
+				 	</section>
+			 			
+			 		<section>
+				 		<div>
+				 			<label for ="email">Email*</label>
+							<input id="formemail" type="e-mail" name="email" class="email__adress" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
+				 		</div>
+				 	</section>
+		 		</div>
+
+			 	<div class="btn">
+		 			<input class="btn--back" id="bag__btn--back" type="button" value="Retour" />
+		 			<button class="btn--next" id="submitcheckout"><p>Valider</p></button>
+		 		</div>
+		 	</div>
+	 	</form>
+	</div>
+
+	<script src="../JS/bag.js"></script>
+</body>
+</html>

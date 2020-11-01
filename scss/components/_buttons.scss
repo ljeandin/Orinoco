@@ -1,0 +1,84 @@
+.detail__btn{
+	@include playfair(18px, 700);
+	padding:0;
+	border: 2px solid $color-primary;
+	min-width:200px;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+
+	&--addtobag{
+		background-color:$color-primary;
+		color:$color-secondary;
+    cursor:pointer;
+    &:active{
+      background-color: $color-secondary;
+      color:$color-primary;
+    }
+	}
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  option{
+  background-color: $color-secondary;
+  min-width: 100%;
+  }
+  .dropbtn {
+  @include playfair(18px, 700);
+  background-color: $color-secondary;
+  color: $color-primary;
+  padding: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  span{
+      display:none;
+    }
+  }
+}
+
+.show {display:block;}
+
+.checkoutwrapper{
+  .btn{
+    display:flex;
+    width:100%;
+    justify-content:center;
+    @include playfair(24px, 700);
+    
+    &--back{
+    padding:0;
+    border: 4px solid $color-primary;
+    width:200px;
+    text-align:center;
+    margin:16px;
+    }
+
+    &--next{
+      background-color:$color-primary;
+    color:$color-secondary;
+    border: 4px solid $color-primary;
+    width:200px;
+    text-align:center;
+    margin:16px;
+    &:disabled{
+      background-color: #464646;
+      border-color: #464646;
+      color: #c4c3c2;
+    }
+    a{
+      color:$color-secondary;
+    }
+    }
+  }
+  
+  input{
+    @include playfair(24px, 700);
+    background-color:$color-secondary;
+  }
+  button{
+    @include playfair(24px, 700);
+  }
+}

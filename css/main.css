@@ -1,0 +1,513 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Raleway:wght@400;700&display=swap");
+body {
+  margin: 0; }
+
+a {
+  color: #000;
+  text-decoration: none; }
+
+h1 {
+  margin: 0;
+  padding: 0; }
+
+p {
+  margin: 8px;
+  padding: 0; }
+
+.iteminfos {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-auto-rows: 16px;
+  grid-gap: 0 24px; }
+  .iteminfos .header {
+    grid-area: 3/9/9/16; }
+  .iteminfos .aside {
+    grid-area: 1/1/1/9; }
+  .iteminfos .detail {
+    grid-area: 10/9/27/16; }
+    .iteminfos .detail__btn--options {
+      grid-area: 30/9/32/12; }
+    .iteminfos .detail__btn--addtobag {
+      grid-area: 34/9/36/12; }
+
+@media screen and (max-width: 1024px) {
+  .iteminfos {
+    grid-gap: 0px 24px; }
+    .iteminfos .header {
+      grid-area: 3/2/9/16; }
+    .iteminfos .aside {
+      grid-area: 10/2/10/9; }
+      .iteminfos .aside img {
+        height: calc(50vw - 72px);
+        width: calc(50vw - 72px); }
+    .iteminfos .detail__description {
+      overflow: scroll; }
+    .iteminfos .detail__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .iteminfos .detail__btn--options {
+        grid-area: 27/9/29/16; }
+      .iteminfos .detail__btn--addtobag {
+        grid-area: 30/9/32/16; } }
+@media screen and (max-width: 768px) {
+  .iteminfos {
+    display: flex;
+    flex-direction: column;
+    padding-top: 48px; }
+    .iteminfos :nth-child(2) {
+      order: 7; }
+    .iteminfos :nth-child(3) {
+      order: 8; }
+    .iteminfos .header {
+      padding: 0 5vw; }
+    .iteminfos .aside {
+      align-self: center;
+      margin: 16px; }
+      .iteminfos .aside img {
+        height: auto;
+        width: 90vw; }
+    .iteminfos .detail {
+      padding: 0 5vw; } }
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between; }
+  .header__logo {
+    display: inline-block;
+    font-family: "Playfair Display", serif;
+    font-size: 96px;
+    color: #000;
+    font-weight: 900;
+    line-height: 32px;
+    margin: 0; }
+  .header__bagicon {
+    display: inline-block;
+    font-size: 72px;
+    line-height: 32px;
+    margin: 0; }
+
+.headercheckout {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0 40px; }
+  .headercheckout__step {
+    display: inline-block;
+    font-family: "Playfair Display", serif;
+    font-size: 36px;
+    color: #000;
+    font-weight: 900;
+    line-height: 32px;
+    margin: 0; }
+    .headercheckout__step em {
+      font-family: "Playfair Display", serif;
+      font-size: 16px;
+      color: #000;
+      font-weight: 400;
+      font-style: normal; }
+  .headercheckout__logo {
+    display: inline-block;
+    font-family: "Playfair Display", serif;
+    font-size: 96px;
+    color: #000;
+    font-weight: 900;
+    margin: 0; }
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .headercheckout {
+    padding: 0; }
+    .headercheckout__step {
+      display: none; } }
+@media screen and (max-width: 768px) {
+  .header__logo {
+    font-family: "Playfair Display", serif;
+    font-size: 72px;
+    color: #000;
+    font-weight: 900;
+    line-height: 0; }
+  .header__bagicon {
+    font-size: 54px;
+    line-height: 0; }
+
+  .headercheckout__logo {
+    font-family: "Playfair Display", serif;
+    font-size: 72px;
+    color: #000;
+    font-weight: 900; }
+  .headercheckout__step {
+    display: none; } }
+.detail__btn {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  color: #000;
+  font-weight: 700;
+  padding: 0;
+  border: 2px solid #000;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .detail__btn--addtobag {
+    background-color: #000;
+    color: #FFF;
+    cursor: pointer; }
+    .detail__btn--addtobag:active {
+      background-color: #FFF;
+      color: #000; }
+
+.dropdown {
+  position: relative;
+  display: inline-block; }
+  .dropdown option {
+    background-color: #FFF;
+    min-width: 100%; }
+  .dropdown .dropbtn {
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    color: #000;
+    font-weight: 700;
+    background-color: #FFF;
+    color: #000;
+    padding: 0;
+    border: none;
+    outline: none;
+    cursor: pointer; }
+    .dropdown .dropbtn span {
+      display: none; }
+
+.show {
+  display: block; }
+
+.checkoutwrapper .btn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  color: #000;
+  font-weight: 700; }
+  .checkoutwrapper .btn--back {
+    padding: 0;
+    border: 4px solid #000;
+    width: 200px;
+    text-align: center;
+    margin: 16px; }
+  .checkoutwrapper .btn--next {
+    background-color: #000;
+    color: #FFF;
+    border: 4px solid #000;
+    width: 200px;
+    text-align: center;
+    margin: 16px; }
+    .checkoutwrapper .btn--next:disabled {
+      background-color: #464646;
+      border-color: #464646;
+      color: #c4c3c2; }
+    .checkoutwrapper .btn--next a {
+      color: #FFF; }
+.checkoutwrapper input {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  color: #000;
+  font-weight: 700;
+  background-color: #FFF; }
+.checkoutwrapper button {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  color: #000;
+  font-weight: 700; }
+
+.iteminfos img {
+  height: 100vh;
+  width: 100%; }
+.iteminfos #selectLens {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+.iteminfos .detail {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  color: #000;
+  font-weight: 400;
+  line-height: 20px;
+  display: flex;
+  flex-direction: column; }
+  .iteminfos .detail__name {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    color: #000;
+    font-weight: 400;
+    margin-bottom: 0; }
+  .iteminfos .detail__price {
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    color: #000;
+    font-weight: 400;
+    margin-top: 0; }
+
+.checkoutwrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 18px 15%; }
+  .checkoutwrapper .items_wrapper {
+    border: 4px solid #000; }
+    .checkoutwrapper .items_wrapper .emptybasket {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .checkoutwrapper .items_wrapper .emptybasket--msg {
+        font-family: "Playfair Display", serif;
+        font-size: 30px;
+        color: #000;
+        font-weight: 900; }
+      .checkoutwrapper .items_wrapper .emptybasket--btn {
+        border: 4px solid #000;
+        background-color: #000;
+        font-family: "Playfair Display", serif;
+        font-size: 18px;
+        color: #FFF;
+        font-weight: 700;
+        margin-top: 36px; }
+    .checkoutwrapper .items_wrapper .productblock {
+      display: flex;
+      flex-direction: column; }
+      .checkoutwrapper .items_wrapper .productblock .item {
+        margin: 6px 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center; }
+        .checkoutwrapper .items_wrapper .productblock .item p {
+          display: block; }
+        .checkoutwrapper .items_wrapper .productblock .item img {
+          width: 15%; }
+        .checkoutwrapper .items_wrapper .productblock .item__name, .checkoutwrapper .items_wrapper .productblock .item__lens, .checkoutwrapper .items_wrapper .productblock .item__quantity {
+          margin: 0 24px;
+          font-family: "Raleway", sans-serif;
+          font-size: 16px;
+          color: #000;
+          font-weight: 400;
+          line-height: 20px; }
+          .checkoutwrapper .items_wrapper .productblock .item__name em, .checkoutwrapper .items_wrapper .productblock .item__lens em, .checkoutwrapper .items_wrapper .productblock .item__quantity em {
+            font-family: "Raleway", sans-serif;
+            font-size: 16px;
+            color: #000;
+            font-weight: 700;
+            line-height: 20px; }
+        .checkoutwrapper .items_wrapper .productblock .item__name {
+          font-family: "Raleway", sans-serif;
+          font-size: 16px;
+          color: #000;
+          font-weight: 700;
+          line-height: 20px; }
+        .checkoutwrapper .items_wrapper .productblock .item__quantity {
+          margin: 0 24px 0 auto; }
+        .checkoutwrapper .items_wrapper .productblock .item__price {
+          font-family: "Raleway", sans-serif;
+          font-size: 16px;
+          color: #000;
+          font-weight: 700;
+          line-height: 20px; }
+    .checkoutwrapper .items_wrapper .totalblock {
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+      .checkoutwrapper .items_wrapper .totalblock .total__title {
+        display: block;
+        width: 15%;
+        font-family: "Playfair Display", serif;
+        font-size: 24px;
+        color: #000;
+        font-weight: 700; }
+      .checkoutwrapper .items_wrapper .totalblock .total__shipping, .checkoutwrapper .items_wrapper .totalblock .total__quantity {
+        font-family: "Raleway", sans-serif;
+        font-size: 16px;
+        color: #000;
+        font-weight: 400;
+        line-height: 20px; }
+        .checkoutwrapper .items_wrapper .totalblock .total__shipping em, .checkoutwrapper .items_wrapper .totalblock .total__quantity em {
+          font-family: "Raleway", sans-serif;
+          font-size: 16px;
+          color: #000;
+          font-weight: 700;
+          line-height: 20px; }
+      .checkoutwrapper .items_wrapper .totalblock .total__quantity {
+        margin: 0 24px 0 auto; }
+      .checkoutwrapper .items_wrapper .totalblock .total__price {
+        font-family: "Raleway", sans-serif;
+        font-size: 18px;
+        color: #000;
+        font-weight: 700;
+        line-height: 22px; }
+  .checkoutwrapper .center {
+    margin: 32px 0;
+    padding: 8px 40px;
+    border: 4px solid #000; }
+    .checkoutwrapper .center .title {
+      font-family: "Playfair Display", serif;
+      font-size: 24px;
+      color: #000;
+      font-weight: 700; }
+      .checkoutwrapper .center .title em {
+        font-family: "Playfair Display", serif;
+        font-size: 16px;
+        color: #000;
+        font-weight: 400;
+        font-style: normal; }
+      .checkoutwrapper .center .title--payement {
+        margin-top: 32px; }
+    .checkoutwrapper .center label {
+      font-family: "Raleway", sans-serif;
+      font-size: 18px;
+      color: #000;
+      font-weight: 400;
+      line-height: 22px; }
+  .checkoutwrapper form section {
+    display: flex; }
+    .checkoutwrapper form section div {
+      width: 100%;
+      margin-top: 16px; }
+    .checkoutwrapper form section label {
+      display: block; }
+    .checkoutwrapper form section input {
+      font-family: "Raleway", sans-serif;
+      font-size: 18px;
+      color: #000;
+      font-weight: 400;
+      line-height: 22px;
+      width: 100%;
+      height: 32px;
+      padding: 0 8px;
+      border: 2px solid #000; }
+  .checkoutwrapper .checkoutform {
+    margin-top: 32px;
+    display: none; }
+
+@media screen and (max-width: 1024px) {
+  .checkoutwrapper {
+    margin: 18px; }
+
+  .checkoutwrapper .checkoutform {
+    margin-top: 0; } }
+@media screen and (max-width: 768px) {
+  .checkoutwrapper {
+    margin: 18px 0; }
+    .checkoutwrapper .productblock .item img {
+      display: none; }
+    .checkoutwrapper .productblock .item .item__name {
+      margin: 0 !important; }
+    .checkoutwrapper .totalblock {
+      display: flex;
+      flex-direction: row; }
+      .checkoutwrapper .totalblock .total__title {
+        display: block; }
+      .checkoutwrapper .totalblock .total__shipping, .checkoutwrapper .totalblock .total__quantity {
+        display: none; }
+      .checkoutwrapper .totalblock .total__price {
+        margin-left: auto; }
+
+  .center {
+    border: 0 !important; }
+
+  .checkoutform {
+    margin-top: 8px; } }
+.orderplaced .message div {
+  margin: 32px; }
+.orderplaced .message__resume {
+  font-family: "Raleway", sans-serif;
+  font-size: 22px;
+  color: #000;
+  font-weight: 400;
+  line-height: 26px; }
+.orderplaced .message__thanks {
+  font-family: "Raleway", sans-serif;
+  font-size: 22px;
+  color: #000;
+  font-weight: 700;
+  line-height: 26px; }
+.orderplaced .btnwrapper {
+  display: flex;
+  justify-content: center; }
+  .orderplaced .btnwrapper .boutonretour {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    color: #000;
+    font-weight: 700;
+    background-color: #000;
+    color: #FFF;
+    border: 4px solid #000;
+    padding: 0 24px;
+    text-align: center; }
+    .orderplaced .btnwrapper .boutonretour a {
+      color: #FFF; }
+
+@media screen and (max-width: 1024px) {
+  .orderplaced .message div {
+    margin: 18px; } }
+@media screen and (max-width: 768px) {
+  .orderplaced .message div {
+    margin: 18px 0; } }
+.homepage {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-gap: 16px 24px; }
+  .homepage .header {
+    grid-area: 3/2/9/16; }
+  .homepage .product {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    color: #000;
+    font-weight: 400;
+    line-height: 22px; }
+    .homepage .product img {
+      width: 100%; }
+    .homepage .product a {
+      margin: 0;
+      line-height: 24px; }
+    .homepage .product p {
+      margin: 0;
+      line-height: 24px; }
+    .homepage .product:nth-child(2) {
+      grid-area: 11/2/37/6; }
+    .homepage .product:nth-child(3) {
+      grid-area: 11/7/37/11; }
+    .homepage .product:nth-child(4) {
+      grid-area: 11/12/37/16; }
+    .homepage .product:nth-child(5) {
+      grid-area: 38/2/64/6; }
+    .homepage .product:nth-child(6) {
+      grid-area: 38/7/64/11; }
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .homepage {
+    width: 100vw;
+    grid-auto-rows: 8px;
+    grid-gap: 4px 24px; } }
+@media screen and (max-width: 768px) {
+  .homepage {
+    width: 100vw;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 16px;
+    padding: 24px 0; }
+    .homepage .header {
+      grid-area: 1/1/7/3;
+      margin: 24px 0; }
+    .homepage .product:nth-child(2) {
+      grid-area: 8/1/38/2; }
+    .homepage .product:nth-child(3) {
+      grid-area: 8/2/38/3; }
+    .homepage .product:nth-child(4) {
+      grid-area: 41/1/71/2; }
+    .homepage .product:nth-child(5) {
+      grid-area: 41/2/71/3; }
+    .homepage .product:nth-child(6) {
+      grid-area: 74/1/104/2; } }
+
+/*# sourceMappingURL=main.css.map */
